@@ -6,7 +6,7 @@ Describe 'Module Manifest Tests' {
 
     It 'Passes Test-ModuleManifest' {
         Test-ModuleManifest -Path $ModuleManifestPath
-        $? | Should Be $true
+        $? | Should -Be $true
     }
 
     # TestCases are splatted to the script so we need hashtables
@@ -14,11 +14,11 @@ Describe 'Module Manifest Tests' {
     It "Script <file> should be valid powershell" -TestCases $testCase {
         param($file)
 
-        $file.fullname | Should Exist
+        $file.fullname | Should -Exist
 
         $contents = Get-Content -Path $file.fullname -ErrorAction Stop
         $errors = $null
         $null = [System.Management.Automation.PSParser]::Tokenize($contents, [ref]$errors)
-        $errors.Count | Should Be 0
+        $errors.Count | Should -Be 0
     }
 }
