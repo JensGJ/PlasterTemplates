@@ -2,12 +2,12 @@
 <plasterManifest schemaVersion="1.1" templateType="Project" 
   xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
   <metadata>
-    <name>ModuleTemplate</name>
+    <name>CBSModule</name>
     <id>ed648a45-fbfc-4a22-bf16-99ad38e096c0</id>
     <version>0.1.0</version>
-    <title>Module</title>
-    <description>My sample module Template</description>
-    <author>Constantin Hager</author>
+    <title>CBSModule</title>
+    <description>PowerShell Module template adjusted for CBS</description>
+    <author>Constantin Hager/Jens Gyldenkærne Jensen</author>
     <tags>Module, Build</tags>
   </metadata>
   <parameters>
